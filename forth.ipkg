@@ -1,0 +1,22 @@
+package forth
+version = 0.1.0
+-- authors =
+-- maintainers =
+-- license =
+-- brief =
+-- readme =
+-- homepage =
+-- sourceloc =
+-- bugtracker =
+
+depends = base
+
+modules = Forth
+
+main = Main 
+
+executable = forth
+-- opts =
+sourcedir = "src"
+-- builddir =
+-- outputdir =
