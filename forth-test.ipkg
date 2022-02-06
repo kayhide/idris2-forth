@@ -1,0 +1,24 @@
+package forth-test
+version = 0.1.0
+-- authors =
+-- maintainers =
+-- license =
+-- brief =
+-- readme =
+-- homepage =
+-- sourceloc =
+-- bugtracker =
+
+depends = base, test
+
+-- modules =
+
+main = Test.Main
+
+executable = forth-test
+-- opts =
+sourcedir = "test"
+-- builddir =
+-- outputdir =
+
+postbuild = "build/exec/forth-test"

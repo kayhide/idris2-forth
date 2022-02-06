@@ -10,6 +10,12 @@ data Expr : Type where
   BinOp : String -> (Int -> Int -> Int) -> Expr
 
 export
+Eq Expr where
+  (==) (Val x) (Val y) = x == y
+  (==) (BinOp s _) (BinOp t _) = s == t
+  (==) _ _ = False
+
+export
 Show Expr where
   show (Val x) = show x
   show (BinOp s _) = "BinOp " <+> s
