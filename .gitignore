@@ -1,0 +1,13 @@
+build
+
+### https://raw.github.com/github/gitignore/8ea9c647018521ab2a9c78d630a2fb6579e16d37/Idris.gitignore
+
+# Idris 2
+*.ttc
+*.ttm
+
+# Idris 1
+*.ibc
+*.o
+
+
