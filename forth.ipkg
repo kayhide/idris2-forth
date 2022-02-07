@@ -9,7 +9,12 @@ version = 0.1.0
 -- sourceloc =
 -- bugtracker =
 
-depends = base
+depends 
+    = base
+    , contrib
+    , elab-util
+    , pretty-show
+    , sop
 
 modules = Forth
 
