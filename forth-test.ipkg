@@ -9,7 +9,13 @@ version = 0.1.0
 -- sourceloc =
 -- bugtracker =
 
-depends = base, test
+depends = base
+        , contrib
+        , test
+        , pretty-show
+        , elab-util
+        , sop
+        , hedgehog
 
 -- modules =
 

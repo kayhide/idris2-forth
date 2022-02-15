@@ -3,6 +3,7 @@ module Test.Main
 import Forth
 import Data.List
 import System
+import Hedgehog
 
 
 assertEq : Eq a => Show a => a -> a -> Either String ()
@@ -44,12 +45,18 @@ tests = concat
 
 main : IO ()
 main = do
+
+  let charGen = the (Gen (List Char)) $ list (linear 0 30) alphaNum
+  b <- check $ the Property $ property $ do
+    xs <- forAll charGen
+    xs === xs
+  putStrLn $ show b
+
   let fails = List.catMaybes $ either Just (const Nothing) <$> tests
 
   when (null fails) $ do
     putStrLn "OK"
     System.exitSuccess
-
   putStrLn "Failed..."
   traverse_ putStrLn fails
   System.exitFailure

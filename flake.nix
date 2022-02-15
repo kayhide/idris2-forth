@@ -13,7 +13,7 @@
     flake-utils.lib.eachSystem [ "x86_64-linux" ]
       (system:
         let
-          pkgs = import nixpkgs { inherit system; overlays = [ idris2-nix.overlay."${system}" ]; };
+          pkgs = import nixpkgs { inherit system; overlays = [ idris2-nix.overlay ]; };
 
           inherit (pkgs) lib;
 
