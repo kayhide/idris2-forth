@@ -38,9 +38,7 @@
                 idris2
               ] ++ deps;
 
-              shellHook = ''
-                export IDRIS2_PACKAGE_PATH=${lib.buildIdris2PackagePath deps}
-              '';
+              IDRIS2_PACKAGE_PATH = lib.buildIdris2PackagePath deps;
             };
         }
       );
